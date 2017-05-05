@@ -41,6 +41,12 @@ a {
 		border-left: 3px solid $accent;
 		border-bottom: 3px solid $accent;
 		transform: rotate(-45deg);
+		transition: all .3s ease-in-out;
+	}
+	a div:hover {
+		transform: scale(1.2, 1.2) rotate(-45deg);
+		border-left: 3px solid $dark;
+		border-bottom: 3px solid $dark;
 	}
 }
 #intro::after {

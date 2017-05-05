@@ -37,7 +37,12 @@ a {
     width: 25px;
     border-left: 3px solid #ffb3b3;
     border-bottom: 3px solid #ffb3b3;
-    transform: rotate(-45deg); }
+    transform: rotate(-45deg);
+    transition: all .3s ease-in-out; }
+  #intro a div:hover {
+    transform: scale(1.2, 1.2) rotate(-45deg);
+    border-left: 3px solid #00334d;
+    border-bottom: 3px solid #00334d; }
 
 #intro::after {
   content: "";
