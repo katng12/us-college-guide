@@ -1,0 +1,84 @@
+#timeline {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.period {
+	width: 70%;
+	margin: auto;
+	position: relative;
+	padding: 0 0 40px 20px;
+	img {
+		width: 120px;
+	}
+}
+.container {
+	visibility: hidden;
+	opacity: 0;
+	transition: all .5s ease-in-out;
+	transform: translate3d(-200px, 0, 0);
+}
+.in-view .container {
+	transform: none;
+	visibility: visible;
+	opacity: 1;
+}
+//line
+div.period::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: $accent;
+	width: 4px;
+	height: 100%;
+}
+//bullet
+div.period::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -6px;
+	background-color: $accent;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	transition: all .5s ease-in-out;
+}
+//make bullet bigger when in view
+div.in-view::after {
+	transform: scale(1.6, 1.6);
+}
+
+.description {
+	h3 {
+		color: $primary;
+		font-family: 'Merriweather', serif;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	p {
+		color: $dark;
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.period {
+		width: 50%;
+		padding: 0 0 80px 50px;
+		img {
+			width: 180px;
+		}
+	}
+	.description {
+	h3 {
+		color: $primary;
+		font-family: 'Merriweather', serif;
+		font-size: 3em;
+	}
+	p {
+		color: $dark;
+		font-size: 23px;
+	}
+}
+}
